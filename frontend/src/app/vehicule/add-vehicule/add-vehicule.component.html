@@ -1,0 +1,27 @@
+
+<div *ngIf="authService.isLoggedIn()">
+    <h3>Ajouter Voiture</h3>
+    <div class="container col-md-6">
+        
+        <form class="container" (ngSubmit)="addVehicule()">
+            <div class="mb-3">
+                <label for="model" class="form-label">Modèle</label>
+                <input type="text" id="model" name="model" [(ngModel)]="vehicule.model" class="form-control" placeholder="Modèle">
+            </div>
+            <div class="mb-3">
+                <label for="matricule" class="form-label">Matricule</label>
+                <input type="number" id="matricule" name="matricule" [(ngModel)]="vehicule.matricule" class="form-control" placeholder="Matricule">
+            </div>
+            <div class="mb-3">
+                <label for="date_achat" class="form-label">Date d'achat</label>
+                <input type="date" id="date_achat" name="date_achat" [(ngModel)]="vehicule.date_achat" class="form-control" placeholder="Date d'achat">
+            </div>
+            <div class="mb-3">
+                <label for="kilometrage" class="form-label">Kilométrage</label>
+                <input type="number" id="kilometrage" name="kilometrage" [(ngModel)]="vehicule.kilometrage" class="form-control" placeholder="Kilométrage">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Ajouter</button>
+        </form>
+
+    </div>
+</div>

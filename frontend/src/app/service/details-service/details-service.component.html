@@ -1,0 +1,33 @@
+
+<div *ngIf="authService.isLoggedIn()">
+  <h1>Mes services</h1>
+  <div class="container" >
+      <table class="table">
+          <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td><b>Nom </b></td>
+                  <td>{{service.nom}}</td>
+              </tr>
+              <tr>
+                  <td><b>Cout </b></td>
+                  <td>{{service.cout}}</td>
+              </tr>
+              <tr>
+                  <td><b>Date </b></td>
+                  <td>{{service.date}}</td>
+              </tr>
+            <tr>
+              <td><b>Rappel </b></td>
+              <td><button (click)="rappel()" type="submit" class="btn btn-outline-primary">Voir</button></td>
+          </tr>
+            </tbody>
+          
+      </table>
+      </div>
+</div>

@@ -1,0 +1,24 @@
+
+<div *ngIf="authService.isLoggedIn()">
+    <h3>Ajouter Rappel</h3>
+    <div class="container col-md-6">
+        
+        <form class="container" (ngSubmit)="addRappel()">
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" id="date" name="date_achat" [(ngModel)]="r.date" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="heure" class="form-label">heure</label>
+                <input type="text" id="heure" name="heure" [(ngModel)]="r.heure" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" id="description" name="description" [(ngModel)]="r.description" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-outline-success">Ajouter</button>
+        </form>
+
+    </div>
+</div>

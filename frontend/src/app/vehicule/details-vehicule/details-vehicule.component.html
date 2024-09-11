@@ -1,0 +1,37 @@
+
+<div *ngIf="authService.isLoggedIn()">
+<h1>Ma Voiture</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">#</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td><b>Modèle </b></td>
+                <td>{{vehicule.model}}</td>
+            </tr>
+            <tr>
+                <td><b>Matricule </b></td>
+                <td>{{vehicule.matricule}}</td>
+            </tr>
+            <tr>
+                <td><b>Kilométrage </b></td>
+                <td>{{vehicule.kilometrage}}</td>
+            </tr>
+            <tr>
+              <td><b>Historique Carburant </b></td>
+              <td><button (click)="histCarb()" type="submit" class="btn btn-outline-primary">Voir</button></td>
+          </tr>
+          <tr>
+            <td><b>Liste des service </b></td>
+            <td><button (click)="serviceList()" type="submit" class="btn btn-outline-primary">Voir</button></td>
+        </tr>
+          </tbody>
+        
+    </table>
+    </div>
+</div>

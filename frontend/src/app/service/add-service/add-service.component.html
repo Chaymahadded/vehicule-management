@@ -1,0 +1,23 @@
+
+<div *ngIf="authService.isLoggedIn()">
+    <h3>Ajouter Service</h3>
+    <div class="container col-md-6">
+        
+        <form class="container" (ngSubmit)="addService()">
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" id="nom" name="nom" [(ngModel)]="service.nom" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label for="cout" class="form-label">Cout</label>
+                <input type="text" id="cout" name="cout" [(ngModel)]="service.cout" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" id="date" name="date_achat" [(ngModel)]="service.date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Ajouter</button>
+        </form>
+
+    </div>
+</div>

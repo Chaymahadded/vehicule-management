@@ -1,0 +1,39 @@
+<section class="col-12 p-5 mt-5 mb-5">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <section >
+                <h1 class="heading">
+                    <span>C</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>N</span>
+                    <span>E</span>
+                    <span>X</span>
+                    <span>I</span>
+                    <span>O</span>
+                    <span>N</span>
+                </h1>
+            </section>
+                <form class="container" (ngSubmit)="connexion()">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Adresse mail</label>
+                        <input type="email" name="email" [(ngModel)]="chauffeur.email" class="form-control form-control-lg"
+                        placeholder="Entrez une adresse mail valide" />
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <label class="form-label" for="form3Example4">Mot de passe</label>
+                        <input type="password" name="pwd" [(ngModel)]="chauffeur.pwd" class="form-control form-control-lg"
+                        placeholder="Entrez mot de passe" />
+                    </div>
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <p class="small fw-bold mt-2 pt-1 mb-3">Vous n'avez pas de compte ? <a routerLink="/register">Créer compte</a></p>
+                        <button type="submit" class="btn" style="padding-left: 2.5rem; padding-right: 2.5rem; background-color: #FFE6E6;" >Connexion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

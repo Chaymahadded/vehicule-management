@@ -1,0 +1,31 @@
+
+<div *ngIf="authService.isLoggedIn()" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Listes des rappels</h1>
+    <div>
+        <a (click)="aadRappel()" class="btn btn-outline-primary">Ajouter</a>
+    </div>
+  </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Heure</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of rappel">
+        <th scope="row">{{r.id}}</th>
+        <td>{{r.date}} </td>
+        <td>{{r.heure}} </td>
+        <td>{{r.description}}</td>
+        <td>
+            <button (click)="updateRappel(r.id)" class="btn btn-outline-success">Modifier</button>
+            <button  (click) = "deleteRappel(r.id)" class="btn btn-outline-danger" style="margin-left: 10px;">Supprimer</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
